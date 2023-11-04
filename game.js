@@ -75,5 +75,5 @@ document.addEventListener('DOMContentLoaded', function() {
     scoreDisplay.textContent = 'Ovens Shot: ' + score;
   }
 
-  setInterval(createOven, 3000); // Change as needed for difficulty
+  setInterval(createOven, 1500); // Change as needed for difficulty
 });
