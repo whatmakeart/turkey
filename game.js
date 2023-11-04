@@ -48,8 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let oven = document.createElement('div');
     oven.classList.add('oven');
     oven.style.right = '0px';
-    oven.style.top = Math.random() * (gameContainer.offsetHeight - 64) + 'px';
-    gameContainer.appendChild(oven);
+    // Prevent oven from appearing in the bottom 180px of the screen
+  let maxHeight = gameContainer.offsetHeight - 180 - 64; // Adjust max height to avoid the bottom 180px and consider the oven's height
+  oven.style.top = Math.random() * maxHeight + 'px'; // Use the adjusted max height for setting the top position
+  gameContainer.appendChild(oven);
 
     let ovenInterval = setInterval(() => {
       oven.style.right = parseInt(oven.style.right) + 1 + 'px';
