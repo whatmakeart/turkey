@@ -30,7 +30,9 @@ body, html {
   left: 10px;
   font-size: 24px;
   color: #fff;
+  background: #000;
   z-index: 10;
+  width: 100%;
 }
 
 .laser {
